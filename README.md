@@ -1,6 +1,6 @@
 # Struggling Detective <br>
 
-➤ https://discord.gg/AGBxa4cwdX
+➤ https://discord.gg/AGBxa4cwdX <br>
 Willkommen bei NesslessStudio
 
 Wir sind eine deutsche Entwicklergesellschaft welche den Schwerpunkt auf die Entwicklung von Videospielen legt.
