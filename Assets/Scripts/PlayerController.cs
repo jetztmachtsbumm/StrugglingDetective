@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         playerInput.Enable();
+        // more comment
     }
 
     private void OnDisable()
