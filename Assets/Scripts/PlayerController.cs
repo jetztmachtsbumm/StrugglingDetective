@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     private float speed = 5;
     
-    private float mouseSensitivity = 45;
+    private float mouseSensitivity = 10;
 
     private Camera cam;
     private float camRot = 0;
