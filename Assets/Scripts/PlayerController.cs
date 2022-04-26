@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private PlayerInput playerInput;
     private float speed = 5;
-    //new comment
+    
     private float mouseSensitivity = 45;
 
     private Camera cam;
@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        // Comment von Damian
     }
 
     private void Move()
