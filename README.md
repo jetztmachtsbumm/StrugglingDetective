@@ -1,1 +1,1 @@
-# StrugglingDetective
+# Struggling Detective
