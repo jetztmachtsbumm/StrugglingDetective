@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
 
         playerInput = new PlayerInput();
+        playerInput.CharacterControls.Jump.performed += a => Jump();
         controller = GetComponent<CharacterController>();
 
         Cursor.visible = false;
@@ -31,6 +32,12 @@ public class PlayerController : MonoBehaviour
         Move();
         Turn();
     }
+
+
+    private void Jump() {
+        
+    }
+
 
     private void Move()
     {
