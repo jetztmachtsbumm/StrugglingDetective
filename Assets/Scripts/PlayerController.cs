@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 smoothInputVelocity;
     private float smoothInputSpeed = .05f;
 
-
+//comment
     private void Awake()
     {
         cam = Camera.main;
