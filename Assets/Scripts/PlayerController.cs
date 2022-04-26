@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private PlayerInput playerInput;
     private float speed = 5;
-//new comment
+    //new comment
     private float mouseSensitivity = 45;
 
     private Camera cam;
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        // Damian Branch Comment
         float x = playerInput.CharacterControls.Movement.ReadValue<Vector2>().x;
         float z = playerInput.CharacterControls.Movement.ReadValue<Vector2>().y;
 
