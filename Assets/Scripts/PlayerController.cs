@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour
 
     private Camera cam;
     private float camRot = 0;
-//comment
+
     private Vector2 currentInputVector;
     private Vector2 smoothInputVelocity;
     private float smoothInputSpeed = .05f;
 
-
+//comment
     private void Awake()
     {
         cam = Camera.main;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
         Cursor.visible = false;
     }
-//comment
+
     private void Update()
     {
         Move();
