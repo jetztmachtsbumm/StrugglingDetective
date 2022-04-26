@@ -1,4 +1,4 @@
-# Struggling Detective
+# Struggling Detective <br>
 
 ➤ https://discord.gg/AGBxa4cwdX
 Willkommen bei NesslessStudio
