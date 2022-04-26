@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        // Damian Branch Comment
         float x = playerInput.CharacterControls.Movement.ReadValue<Vector2>().x;
         float z = playerInput.CharacterControls.Movement.ReadValue<Vector2>().y;
 
