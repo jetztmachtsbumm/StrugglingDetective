@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Jump() {
+        //der char geht nach oben, habe es leider noch nicht geschafft in wieder landen zu lassen.
+        //versuchte es über einen rigidbody aber da gab es Probleme
         Vector3 direction_up = transform.up * height;
         controller.Move(direction_up * speed * Time.deltaTime);
     }
