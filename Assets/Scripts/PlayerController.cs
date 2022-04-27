@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
-    private float speed = 5;
+    private float speed = 2.5f;
     
     private float mouseSensitivity = 45;
 
