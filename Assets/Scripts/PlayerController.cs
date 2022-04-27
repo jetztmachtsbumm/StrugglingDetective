@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 smoothInputVelocity;
     private float smoothInputSpeed = .05f;
 
+    private float sneakHeight;
 
+    //comment
     private void Awake()
     {
         cam = Camera.main;
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
         playerInput.CharacterControls.Run.performed += a => speed = 5f;
         playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
+        playerInput.CharacterControls.Sneak.performed += a => sneakHeight = .6f;
+        playerInput.CharacterControls.Sneak.canceled += a => sneakHeight = .97f;
 
         controller = GetComponent<CharacterController>();
 
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
+        transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z);
     }
 
     private void Move()
