@@ -27,7 +27,11 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
 
         playerInput = new PlayerInput();
+
         playerInput.CharacterControls.Jump.performed += a => Jump();
+        playerInput.CharacterControls.Run.performed += a => speed = 5f;
+        playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
+
         controller = GetComponent<CharacterController>();
 
         Cursor.visible = false;
@@ -50,8 +54,6 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Jump() {
-        //der char geht nach oben, habe es leider noch nicht geschafft in wieder landen zu lassen.
-        //versuchte es über einen rigidbody aber da gab es Probleme.
         Vector3 direction_up = transform.up * height;
         controller.Move(direction_up * speed * Time.deltaTime);
     }
@@ -64,6 +66,11 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = transform.right * x + transform.forward * z;
 
         controller.Move(direction * speed * Time.deltaTime);
+    }
+
+    private void Sneak()
+    {
+
     }
 
     private void Turn()
