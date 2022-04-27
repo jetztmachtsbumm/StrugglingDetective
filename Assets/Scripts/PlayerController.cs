@@ -5,11 +5,13 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
+    private float gravityValue = -9.81f;
 
     private float speed = 2.5f;
     private float height = 40;
 
-    
+    private Vector3 playerVelocity;
+
     private float mouseSensitivity = 10;
 
     private Camera cam;
@@ -35,6 +37,16 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
+        Debug.Log(controller.isGrounded);
+
+        if (!controller.isGrounded) {
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
+        }
+        if (!controller.isGrounded)
+        {
+            playerVelocity.y = 0;
+        }
     }
 
     private void Jump() {
