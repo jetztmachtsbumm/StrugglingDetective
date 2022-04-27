@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour
 
     private float sneakHeight;
 
-    //comment
     private void Awake()
     {
         cam = Camera.main;
-
         playerInput = new PlayerInput();
+
+        sneakHeight = transform.position.y;
 
         playerInput.CharacterControls.Run.performed += a => speed = 5f;
         playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         playerInput.CharacterControls.Sneak.canceled += a => sneakHeight = .97f;
 
         controller = GetComponent<CharacterController>();
-
         Cursor.visible = false;
     }
 
