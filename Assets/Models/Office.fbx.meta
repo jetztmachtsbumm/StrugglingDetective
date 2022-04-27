@@ -17,6 +17,36 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 72cf0f6d9f9174253a746c4f4dc3dcbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.001
+    second: {fileID: 2100000, guid: 72cf0f6d9f9174253a746c4f4dc3dcbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.002
+    second: {fileID: 2100000, guid: 72cf0f6d9f9174253a746c4f4dc3dcbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Wood
+    second: {fileID: 2100000, guid: e1b5768ed4bfc4dc89f5ac8cf6931f91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Wood.003
+    second: {fileID: 2100000, guid: e1b5768ed4bfc4dc89f5ac8cf6931f91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Wood.004
+    second: {fileID: 2100000, guid: e1b5768ed4bfc4dc89f5ac8cf6931f91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 0f7b179592f314f88ad7a4348301445d, type: 2}
   materials:
