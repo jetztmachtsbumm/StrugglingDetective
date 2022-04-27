@@ -1,12 +1,16 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
+
     private float speed = 2.5f;
+    private float height = 40;
+
     
-    private float mouseSensitivity = 45;
+    private float mouseSensitivity = 10;
 
     private Camera cam;
     private float camRot = 0;
@@ -21,6 +25,7 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
 
         playerInput = new PlayerInput();
+        playerInput.CharacterControls.Jump.performed += a => Jump();
         controller = GetComponent<CharacterController>();
 
         Cursor.visible = false;
@@ -30,6 +35,13 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
+    }
+
+    private void Jump() {
+        //der char geht nach oben, habe es leider noch nicht geschafft in wieder landen zu lassen.
+        //versuchte es über einen rigidbody aber da gab es Probleme.
+        Vector3 direction_up = transform.up * height;
+        controller.Move(direction_up * speed * Time.deltaTime);
     }
 
     private void Move()
