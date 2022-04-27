@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private float sneakHeight;
 
-
-
+    //comment
     private void Awake()
     {
         cam = Camera.main;
