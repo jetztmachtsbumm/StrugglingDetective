@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 smoothInputVelocity;
     private float smoothInputSpeed = .05f;
 
+    private float sneakHeight;
+
+
 
     private void Awake()
     {
@@ -28,9 +31,10 @@ public class PlayerController : MonoBehaviour
 
         playerInput = new PlayerInput();
 
-        playerInput.CharacterControls.Jump.performed += a => Jump();
         playerInput.CharacterControls.Run.performed += a => speed = 5f;
         playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
+        playerInput.CharacterControls.Sneak.performed += a => sneakHeight = .6f;
+        playerInput.CharacterControls.Sneak.canceled += a => sneakHeight = .97f;
 
         controller = GetComponent<CharacterController>();
 
@@ -41,21 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        Debug.Log(controller.isGrounded);
-
-        if (!controller.isGrounded) {
-            playerVelocity.y += gravityValue * Time.deltaTime;
-            controller.Move(playerVelocity * Time.deltaTime);
-        }
-        if (!controller.isGrounded)
-        {
-            playerVelocity.y = 0;
-        }
-    }
-
-    private void Jump() {
-        Vector3 direction_up = transform.up * height;
-        controller.Move(direction_up * speed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z);
     }
 
     private void Move()
@@ -66,13 +56,9 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = transform.right * x + transform.forward * z;
 
         controller.Move(direction * speed * Time.deltaTime);
-        // Hellu
     }
 
-    private void Sneak()
-    {
 
-    }
 
     private void Turn()
     {
