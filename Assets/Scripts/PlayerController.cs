@@ -5,12 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
-    private float gravityValue = -9.81f;
 
     private float speed = 2.5f;
-    private float height = 40;
-
-    private Vector3 playerVelocity;
 
     private float mouseSensitivity = 10;
 
@@ -28,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
         playerInput = new PlayerInput();
 
-        playerInput.CharacterControls.Jump.performed += a => Jump();
         playerInput.CharacterControls.Run.performed += a => speed = 5f;
         playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
 
@@ -41,21 +36,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        Debug.Log(controller.isGrounded);
-
-        if (!controller.isGrounded) {
-            playerVelocity.y += gravityValue * Time.deltaTime;
-            controller.Move(playerVelocity * Time.deltaTime);
-        }
-        if (!controller.isGrounded)
-        {
-            playerVelocity.y = 0;
-        }
-    }
-
-    private void Jump() {
-        Vector3 direction_up = transform.up * height;
-        controller.Move(direction_up * speed * Time.deltaTime);
     }
 
     private void Move()
@@ -66,12 +46,6 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = transform.right * x + transform.forward * z;
 
         controller.Move(direction * speed * Time.deltaTime);
-        // Hellu
-    }
-
-    private void Sneak()
-    {
-
     }
 
     private void Turn()
