@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = transform.right * x + transform.forward * z;
 
         controller.Move(direction * speed * Time.deltaTime);
+        // Hellu
     }
 
     private void Sneak()
