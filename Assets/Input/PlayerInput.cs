@@ -66,7 +66,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Sneak"",
                     ""type"": ""Button"",
-                    ""id"": ""dffca33e-5c72-4aae-ae4c-65b1df0030bf"",
+                    ""id"": ""fdd39c52-e2c9-49e7-9eb3-dde8a2921b0d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -164,7 +164,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""86207f71-e6a6-4e3f-ab3a-e308e62d8235"",
+                    ""id"": ""bfe1388b-e80e-4231-b6fd-22e54fed82f4"",
                     ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
                     ""processors"": """",
