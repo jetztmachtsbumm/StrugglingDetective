@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 24127527b1aa047088e46bd2729e2c48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: b63a75a92a05042e3868f658369e1294, type: 2}
   - first:
@@ -29,6 +34,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Glass.002
     second: {fileID: 2100000, guid: 72cf0f6d9f9174253a746c4f4dc3dcbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 778277532317c47d88d3ea0f4e828d73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phone
+    second: {fileID: 2100000, guid: 0050af856ae9a49c98bceb28c49adb16, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -66,9 +66,6 @@ public class PlayerController : MonoBehaviour
 
         cam.transform.localRotation = Quaternion.Euler(camRot, 0, 0);
         transform.Rotate(Vector3.up * mouseX);
-
-        // moin
-
     }
 
     private void OnEnable()
