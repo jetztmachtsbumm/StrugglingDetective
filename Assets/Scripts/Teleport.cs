@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class Teleport : MonoBehaviour
 {
     public Transform Park;
-
     public GameObject Player;
     public GameObject TransitionUI;
 
