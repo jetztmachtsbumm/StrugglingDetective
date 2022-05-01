@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        /* transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z); */
     }
 
     private void Move()
@@ -67,7 +66,6 @@ public class PlayerController : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(camRot, 0, 0);
         transform.Rotate(Vector3.up * mouseX);
 
-        // moin
 
     }
 
