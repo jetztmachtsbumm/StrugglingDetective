@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
-
+//unprofessionelle lösung für merge probleme, aber wenns klappt :) ^^
     private float speed = 2.5f;
 
     private float mouseSensitivity = 10;
