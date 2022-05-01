@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        //transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z);
     }
 
     private void Move()
