@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInput playerInput;
-
+    
     private float speed = 2.5f;
 
     private float mouseSensitivity = 10;
@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour
 
     private float sneakHeight;
 
-    //comment
     private void Awake()
     {
         cam = Camera.main;
-
         playerInput = new PlayerInput();
+
+        sneakHeight = transform.position.y;
 
         playerInput.CharacterControls.Run.performed += a => speed = 5f;
         playerInput.CharacterControls.Run.canceled += a => speed = 2.5f;
@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         playerInput.CharacterControls.Sneak.canceled += a => sneakHeight = .97f;
 
         controller = GetComponent<CharacterController>();
-
         Cursor.visible = false;
     }
 
@@ -40,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
-        transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z);
     }
 
     private void Move()
@@ -67,6 +65,8 @@ public class PlayerController : MonoBehaviour
 
         cam.transform.localRotation = Quaternion.Euler(camRot, 0, 0);
         transform.Rotate(Vector3.up * mouseX);
+
+
     }
 
     private void OnEnable()
