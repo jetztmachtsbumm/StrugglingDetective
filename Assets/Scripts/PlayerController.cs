@@ -4,8 +4,9 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
+    private PlayerInteraction playerInteraction;
     private PlayerInput playerInput;
-    
+
     private float speed = 2.5f;
 
     private float mouseSensitivity = 10;
@@ -31,7 +32,10 @@ public class PlayerController : MonoBehaviour
         playerInput.CharacterControls.Sneak.performed += a => sneakHeight = .6f;
         playerInput.CharacterControls.Sneak.canceled += a => sneakHeight = .97f;
 
+        playerInput.CharacterControls.Interaction.performed += ctx => playerInteraction.CheckForInteraction();
+
         controller = GetComponent<CharacterController>();
+        playerInteraction = GetComponent<PlayerInteraction>();
         Cursor.visible = false;
     }
 
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Turn();
+        transform.position = new Vector3(transform.position.x, sneakHeight, transform.position.z);
     }
 
     private void Move()
@@ -65,8 +70,6 @@ public class PlayerController : MonoBehaviour
 
         cam.transform.localRotation = Quaternion.Euler(camRot, 0, 0);
         transform.Rotate(Vector3.up * mouseX);
-
-
     }
 
     private void OnEnable()
