@@ -81,4 +81,9 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.Disable();
     }
+
+    public void SetMouseSensitivity(float mouseSens)
+    {
+        mouseSensitivity = mouseSens * 100;
+    }
 }
