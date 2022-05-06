@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void Turn()
     {
-        Vector2 input = playerInput.CharacterControls.Turning.ReadValue<Vector2>() * mouseSensitivity * Time.deltaTime;
+        Vector2 input = playerInput.CharacterControls.Turning.ReadValue<Vector2>() * mouseSensitivity;
         currentInputVector = Vector2.SmoothDamp(currentInputVector, input, ref smoothInputVelocity, smoothInputSpeed);
 
         float mouseX = currentInputVector.x;
@@ -84,6 +84,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetMouseSensitivity(float mouseSens)
     {
-        mouseSensitivity = mouseSens * 100;
+        mouseSensitivity = mouseSens;
     }
 }

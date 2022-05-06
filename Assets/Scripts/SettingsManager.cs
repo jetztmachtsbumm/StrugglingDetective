@@ -66,7 +66,9 @@ public class SettingsManager : MonoBehaviour
     {
         int fps = int.Parse(fpsLimit.options[fpsLimit.value].text);
         Application.targetFrameRate = fps;
+        Debug.Log(PlayerPrefs.GetInt("fpsLimit"));
         PlayerPrefs.SetInt("fpsLimit", fpsLimit.value);
+        Debug.Log(PlayerPrefs.GetInt("fpsLimit"));
     }
 
     public void OnToggleVsync()
